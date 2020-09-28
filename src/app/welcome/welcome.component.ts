@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { ProductService } from './../products/shared/product.service';
 import { Product } from '../products/shared/product';
@@ -16,5 +16,6 @@ export class WelcomeComponent implements OnInit {
   ngOnInit(): void {
     this.topProducts$ = this.ps.getTopProducts(4);
   }
+
 
 }
